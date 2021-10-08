@@ -3,9 +3,7 @@ This is a binary image classifier trained using a Convolutional Neural Network t
 
 
 ## Methods
-This is a mostly unoptimized model using a combination of Conv2D, MaxPooling2D, and a Dense layer with dropout feeding into a sigmoid layer. The loss function used is binary crossentropy. Using these methods, the model achieved a validation accuracy of 97.5% with an expected test accuracy around 70-80%.
+This model uses a combination of Conv2D, MaxPooling2D, and a Dense layer with dropout feeding into a sigmoid layer. The loss function used is binary crossentropy. Basic image manipulations are performed on the data before being fed into the model to add diversity to the images trained on. Using these methods, the model achieved a validation accuracy of 87% with a test accuracy of 97.3%. This was confirmed by increasing the default validation set from 16 images to 80 using data removed from the training set. A further 20% of the training set was then set aside for testing, as there seems to be inaccurate labeling in the original test set.
 
 ## Future Work
-This project is still very early on in it's lifecycle. The model could be improved using image preprocessing techniques to add more diversity to the images trained on. The capacity and parameters of the model itself should also be heavily experimented with to find the optimal configuration and avoid overfitting. The classifier should also be modified to run on accelerated hardware such as GPUs and TPUs to save training time and better enable training in cloud environments.
-
-Something that should be investigated is possible mislabled data in the final test set as theorized by some users on the dataset's discussion board. This may cause final accuracy ratings to be lower than expected based on training results.
+This project has achieved a high accuracy but extensive hyperparameter optimization hasn't been done to find the ideal capacity or other parameters for the network. Next steps may involve modifying the classifier to run on accelerated hardware such as GPUs and TPUs to save training time and better enable deployment in cloud environments.
